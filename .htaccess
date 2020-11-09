@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+	#Permitir activar el módulo de apache para manipular urls
+	RewriteEngine On
+
+	#validar  si la condición es verdadera, REQUEST_FILENAME no hace referencia a un archivo
+	RewriteCond %{REQUEST_FILENAME} !-f
+
+	#validar si la condición es verdadera, REQUEST_FILENAME no hace referencia a un directorio
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	#si las dos reglas anteriores se cumplen, se envía todo al archivo index.php
+	RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>

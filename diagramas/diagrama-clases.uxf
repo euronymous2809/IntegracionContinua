@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>150</y>
+      <w>150</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Pagina
+--
+# id:int
++ titulo:string(128)
++ foto:string(64)
++ texto:string
++ video:string(64)
+# estado:int
+# id_usuario:int
+--
+crear()
+mostrar()
+editar()
+eliminar()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>50</y>
+      <w>150</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+id:int
+nombre:string(128)
+email:string(128)
+clave:string
+telefono:string
+estado:int
+rol:int
+--
+crear()
+mostrar()
+editar()
+eliminar()
+ingresar()
+salir()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>80</y>
+      <w>140</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Articulo
+--
+id:int
+titulo:string(128)
+descripcion:string
+foto:string(128)
+fecha:string
+stado:int
+id_usuario:int
+--
+crear()
+mostrar()
+editar()
+eliminar()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>370</y>
+      <w>180</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Comentario
+--
+id:int
+id_usuario:int
+id_articulo:int
+comentario:string(258)
+fecha:string
+estado:int
+--
+crear()
+mostrar()
+editar()
+elimiar()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>380</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Puntuación
+-
+# id:int
+# id_usuario:int
+# id_articulo:int
+# calificacion:int(1)
+--
+crear()
+mostrar()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>160</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+&lt; administra</panel_attributes>
+    <additional_attributes>140.0;10.0;40.0;10.0;40.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>260</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>280</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=1
+&lt; tiene</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;70.0;180.0;70.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>50</y>
+      <w>270</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+gestiona &gt;</panel_attributes>
+    <additional_attributes>10.0;40.0;60.0;40.0;60.0;10.0;250.0;10.0;250.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>170</y>
+      <w>160</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+tiene &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0;140.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>290</y>
+      <w>610</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+hace &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;330.0;590.0;330.0;590.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>290</y>
+      <w>110</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+realiza &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;90.0;60.0;90.0;90.0</additional_attributes>
+  </element>
+</diagram>
